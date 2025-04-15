@@ -23,7 +23,7 @@ const App: React.FC = () => {
       const selectedFile = e.target.files[0];
       setFile(selectedFile);
       setText(''); // Reset text when file is selected
-      
+
       // Read file content and display it in the textarea
       const reader = new FileReader();
       reader.onload = (event) => {
@@ -55,9 +55,20 @@ const App: React.FC = () => {
       }
 
       setResult(response.data);
-    } catch (err) {
+    } catch (err: unknown) {
       console.error('Classification error:', err);
-      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+
+      if (axios.isAxiosError(err)) {
+        if (err.response?.data?.detail) {
+          setError(err.response.data.detail);
+        } else {
+          setError(err.message || 'An unexpected error occurred');
+        }
+      } else if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('An unexpected error occurred');
+      }
     } finally {
       setLoading(false);
     }
@@ -78,7 +89,7 @@ const App: React.FC = () => {
             Enter document text or upload a text file to classify
           </p>
         </div>
-        
+
         <div className="border-t border-gray-200 px-4 py-5 sm:p-6">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
@@ -95,7 +106,7 @@ const App: React.FC = () => {
                 onChange={handleTextChange}
               ></textarea>
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-2">
                 Or Upload a Text File
@@ -109,7 +120,7 @@ const App: React.FC = () => {
                 className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
               />
             </div>
-            
+
             <div className="flex justify-center">
               <button
                 type="submit"
@@ -130,7 +141,7 @@ const App: React.FC = () => {
             </div>
           </form>
         </div>
-        
+
         {error && (
           <div className="border-t border-gray-200 px-4 py-5 sm:p-6 bg-red-50">
             <div className="rounded-md bg-red-50 p-4">
