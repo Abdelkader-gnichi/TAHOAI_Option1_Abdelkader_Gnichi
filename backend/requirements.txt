@@ -4,5 +4,4 @@ pydantic
 python-multipart
 transformers
 torch
-sqlite3
 python-dotenv
