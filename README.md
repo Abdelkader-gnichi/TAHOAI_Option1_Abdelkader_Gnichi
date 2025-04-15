@@ -117,6 +117,20 @@ The backend API is available at http://localhost:8000/docs when the server is ru
 - The model returns a label and confidence score
 - No model downloading or local computation is required
 
+### Alternative Implementation
+
+I initially implemented the solution using Hugging Face's zero-shot classification model, which:
+- Required installing transformers, torch, and other dependencies
+- Took considerable time to download and set up initially
+- Worked effectively for classifying documents
+- Was replaced with the Google API solution for efficiency and ease of setup
+
+### Limitations and Future Improvements
+
+- Authentication and rate limiting are not implemented
+- For production use, the CORS policy should be restricted to specific origins
+- Adding caching for frequent document types could improve performance
+
 
 ## Testing
 
