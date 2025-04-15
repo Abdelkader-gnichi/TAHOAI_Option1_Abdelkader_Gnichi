@@ -16,9 +16,9 @@ async def classify(request: ClassificationRequest):
         text = request.text.strip()
         if len(text) < 10:
             raise HTTPException(status_code=400, detail="Text is too short for classification")
-        if len(text) > 2000:
-            logger.info(f"Truncating text from {len(text)} to 2000 characters")
-            text = text[:2000]
+        # if len(text) > 2000:
+        #     logger.info(f"Truncating text from {len(text)} to 2000 characters")
+        #     text = text[:2000]
         result = await classify_text_with_google(text)
         log_classification(len(text), result["label"], result["confidence"])
         return result
@@ -33,9 +33,9 @@ async def classify_file(file: UploadFile = File(...)):
         text = content.decode("utf-8").strip()
         if len(text) < 10:
             raise HTTPException(status_code=400, detail="File content too short")
-        if len(text) > 2000:
-            logger.info(f"Truncating text from {len(text)} to 2000 characters")
-            text = text[:2000]
+        # if len(text) > 2000:
+        #     logger.info(f"Truncating text from {len(text)} to 2000 characters")
+        #     text = text[:2000]
         result = await classify_text_with_google(text)
         log_classification(len(text), result["label"], result["confidence"])
         return result
