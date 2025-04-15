@@ -2,6 +2,13 @@
 
 A fullstack application that allows users to classify documents using AI. The application exposes Google's Generative AI (Gemini) via a backend API and presents the results in a frontend interface.
 
+
+
+https://github.com/user-attachments/assets/cd0d7fbf-03bd-4308-bb28-29977b92dc74
+
+
+
+
 ## Project Structure
    
 ```
