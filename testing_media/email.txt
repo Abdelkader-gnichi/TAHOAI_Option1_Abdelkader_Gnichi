@@ -1,0 +1,14 @@
+Subject: Project Update – Document Classifier  
+
+Hi Team,  
+
+The ML model for document classification is progressing well:  
+- Current accuracy: 92% (test set).  
+- Remaining tasks: Hyperparameter tuning.  
+
+Please review the attached report and share feedback by EOD Friday.  
+
+Best,  
+Alex  
+Machine Learning Team  
+alex.ml@company.com  

@@ -1,0 +1,48 @@
+# Invoice
+
+**Invoice number**  
+65E23C38-0008  
+
+**Date of issue**  
+April 26, 2024  
+
+**Date due**  
+April 26, 2024  
+
+---
+
+## OpenAI, LLC  
+548 Market Street  
+
+PMB 97273  
+
+San Francisco, California 94104-5401  
+
+United States  
+
+ar@openai.com  
+
+---
+
+## $20.00 USD due April 26, 2024  
+
+Pay online  
+
+---
+
+### Description  
+|    | Qty | Unit price | Amount |
+|---|---|---|---|
+| ChatGPT Plus Subscription | 1   | $20.00 | $20.00 |
+| Apr 26 – May 26, 2024 |    |    |    |
+
+---
+
+### Subtotal  
+$20.00  
+
+Total  
+$20.00  
+
+Amount due  
+$20.00 USD  

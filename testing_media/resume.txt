@@ -1,0 +1,17 @@
+JANE DOE  
+jane.doe@email.com | (555) 123-4567 | linkedin.com/in/janedoe  
+
+### PROFESSIONAL SUMMARY  
+Data Scientist with 5+ years of experience in machine learning and NLP.  
+
+### EXPERIENCE  
+**Senior Data Scientist**  
+XYZ Corp, San Francisco | Jan 2022–Present  
+- Developed ML models for document classification (Accuracy: 94%).  
+
+**Data Analyst**  
+Analytics Co., Boston | Aug 2019–Dec 2021  
+- Built Python pipelines for text data extraction.  
+
+### EDUCATION  
+MS in Computer Science, MIT (2019)  
