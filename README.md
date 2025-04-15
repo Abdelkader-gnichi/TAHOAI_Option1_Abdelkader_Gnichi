@@ -3,9 +3,7 @@
 A fullstack application that allows users to classify documents using AI. The application exposes Google's Generative AI (Gemini) via a backend API and presents the results in a frontend interface.
 
 ## Project Structure
-├── requirements.txt     
-│   
-│   └── Dockerfile          
+   
 ```
 
 ├── backend/
@@ -69,6 +67,13 @@ The model analyzes the text and determines the most likely category based on con
 
 1. Make sure you have Docker and Docker Compose installed
 2. Clone this repository
+
+Run the following command to clone the repository to your local machine:
+
+```bash
+git clone https://github.com/Abdelkader-gnichi/TAHOAI_Option1_Abdelkader_Gnichi.git
+
+```
 3. Create a `.env` file in the backend directory with your Google API key
 4. Run ` docker compose up --build -d`
 5. Access the frontend at http://localhost:5173/
