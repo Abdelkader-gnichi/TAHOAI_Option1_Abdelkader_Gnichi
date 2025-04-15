@@ -13,33 +13,31 @@ https://github.com/user-attachments/assets/cd0d7fbf-03bd-4308-bb28-29977b92dc74
    
 ```
 
-├── backend/
-|   ├── api
-│   └── routes.py
-|
-├── classification_logs.db
-├── core
-│   └── logging_config.py
-|
-├── main.py                 # FastAPI Main Application
-├── models
-│   └── schemas.py
-|
-├── .env                    # Environment variables
-├── Dockerfile              # Docker configuration for backend
-├── requirements.txt        # Python dependencies
-└── services
-|    ├── classification.py
-|    └── database.py
-| 
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx          # Main React component
-│   │   └── ...              # Other React components
-│   ├── package.json         # Node.js dependencies
-│   └── Dockerfile           # Docker configuration for frontend
-├── docker-compose.yml       # Docker Compose configuration
-└── README.md                # Project documentation
+├── backend/                      # Backend (FastAPI) code
+│   ├── api/                      # API endpoint definitions
+│   │   └── routes.py             # Route handlers
+│   ├── core/                     # Core configurations
+│   │   └── logging_config.py     # Logging setup
+│   ├── models/                   # Data models/schemas
+│   │   └── schemas.py            # Pydantic schemas
+│   ├── services/                 # Business logic
+│   │   ├── classification.py     # ML classification service
+│   │   └── database.py           # Database operations
+│   ├── main.py                   # FastAPI app entrypoint
+│   ├── Dockerfile                # Backend Docker configuration
+│   └── requirements.txt          # Python dependencies
+│
+├── frontend/                     # Frontend (React) code
+│   ├── src/                      
+│   │   ├── App.tsx               # Root React component
+│   │   └── ...                   # Other components/assets
+│   ├── package.json              # Frontend dependencies
+│   └── Dockerfile                # Frontend Docker configuration
+│
+├── classification_logs.db        # SQLite database (consider moving to `backend/data/`)
+├── .env                          # Environment variables
+├── docker-compose.yml            # Multi-container setup
+└── README.md                     # Project docs
 ```
 
 ## Features
